@@ -13,6 +13,6 @@ test:
 
 production:
   adapter: postgresql
-  database: dunces
-  pool: 5
-  timeout: 5000
+  database: dunces_production
+  username: dunces
+  password: <%= ENV['DUNCES_DATABASE_PASSWORD'] %>
