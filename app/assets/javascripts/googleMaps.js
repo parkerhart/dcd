@@ -34,12 +34,11 @@ App.getDirections = function(){
 
 $(function(){
   // initialize map
-
-  var newYork = new google.maps.LatLng(40.7284186, -73.98713956);
+  var washingtonDc = new google.maps.LatLng(38.8951, -77.0367);
   var styles = [{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#C6E2FF"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#C5E3BF"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#D1D1B8"}]}];
   var mapOptions = {
-    zoom: 13,
-    center: newYork,
+    zoom: 15,
+    center: washingtonDc,
     styles: styles
   };
 
@@ -57,8 +56,8 @@ $(function(){
 
   // autocomplete defined and instantiated
   var autocompleteBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(40.7733, -73.9818),
-    new google.maps.LatLng(40.6833, -73.9411));
+    new google.maps.LatLng(38.8951, -77.0367),
+    new google.maps.LatLng(38.8951, -77.0367));
 
   var autocompleteOptions = {
     bounds: autocompleteBounds
