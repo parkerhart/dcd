@@ -1,18 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
 
 development:
-  adapter: postgresql
-  database: dunces_dev
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: dunces_development
 
 test:
-  adapter: postgresql
+  <<: *default
   database: dunces_test
-  pool: 5
-  timeout: 5000
 
 production:
-  adapter: postgresql
+  <<: *default
   database: dunces_production
   username: dunces
-  password: <%= ENV['DUNCES_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PARTY_PLAYR_DATABASE_PASSWORD'] %>
