@@ -30,6 +30,10 @@ gem 'httparty'
 gem 'pry-rails'
 gem 'shoulda-matchers'
 
+gem 'spring',        group: :development
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -37,11 +41,18 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'jasmine'
+  gem 'jasmine' 
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+
 end
 
 gem 'rails_12factor', group: :production
 
+ gem 'pry'
+gem "active_model_serializers"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
