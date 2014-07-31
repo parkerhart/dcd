@@ -58,7 +58,7 @@ $(function(){
   // autocomplete defined and instantiated
   var autocompleteBounds = new google.maps.LatLngBounds(
     new google.maps.LatLng(38.8951, -77.0367),
-    new google.maps.LatLng(38.8951, -77.0367)s);
+    new google.maps.LatLng(38.8951, -77.0367));
 
   var autocompleteOptions = {
     bounds: autocompleteBounds
